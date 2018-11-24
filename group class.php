@@ -57,6 +57,15 @@ class Group{
 		return $this->groupName;
 	}
 
+	//	add user to group by userID
+	public function addUser($userID) {
+        add_user_to_group(userID, $this->groupID);
+    }
+
+	//	kick user from group by userID
+    public function kickUser($userID) {
+        remove_user_from_group($userID, $this->groupID);
+    }
 
 }
 ?>
