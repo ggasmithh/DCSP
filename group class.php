@@ -4,13 +4,13 @@ class Group{
     private $groupID = -16; 
 	private $groupName = "";
 		
-	public static function createNewGroup($groupID, $groupName) {
+	public static function createNewGroup($groupName) {
 
 		$newGroup = new Group();
 		$newGroup->groupName = $groupName;
 		$newGroup->groupID = $groupID;
 		
-		$newGroup->groupID = create_group($groupID, $groupName);
+		$newGroup->groupID = create_group($groupName);
 
 		return $newGroup;
 	}
@@ -23,6 +23,21 @@ class Group{
 
 		$details = get_group_details_from_id($groupID);
 		$newGroup->groupName = $details["groupName"];
+
+		return $newGroup;
+	}
+
+	public static function retrieveGroupByName($groupName) {
+		
+		$newGroup = new Group();
+
+		$id = get_id_from_group_name($groupName);
+
+		$newGroup->groupName = $groupName;
+
+		$newGroup->groupID = $id;
+
+		$details = get_group_details_from_id($id);
 
 		return $newGroup;
 	}
