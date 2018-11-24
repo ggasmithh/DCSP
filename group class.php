@@ -65,7 +65,11 @@ class Group{
 	//	kick user from group by userID
     public function kickUser($userID) {
         remove_user_from_group($userID, $this->groupID);
-    }
+	}
+	
+	public function id() {
+		return $this->groupID;
+	}
 
 }
 ?>
