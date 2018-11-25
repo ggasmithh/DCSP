@@ -21,7 +21,7 @@ class Group{
 
 		$newGroup->groupID = $groupID;
 
-		$details = get_group_details_from_id($groupID);
+		$details = get_group_name_from_id($groupID);
 		$newGroup->groupName = $details["groupName"];
 
 		return $newGroup;
@@ -36,8 +36,6 @@ class Group{
 		$newGroup->groupName = $groupName;
 
 		$newGroup->groupID = $id;
-
-		$details = get_group_details_from_id($id);
 
 		return $newGroup;
 	}
