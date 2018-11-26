@@ -1,7 +1,7 @@
 <?php
 include("db_functions.php");
 class Group{
-    private $groupID = -16; 
+	private $groupID = -16; 
 	private $groupName = "";
 		
 	public static function createNewGroup($groupName) {
@@ -31,11 +31,10 @@ class Group{
 		
 		$newGroup = new Group();
 
-		$id = get_id_from_group_name($groupName);
-
+		$newGroup->groupID = get_id_from_group_name($groupName);
 		$newGroup->groupName = $groupName;
 
-		$newGroup->groupID = $id;
+		
 
 		return $newGroup;
 	}
