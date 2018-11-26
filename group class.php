@@ -29,7 +29,7 @@ class Group{
 
 	public static function retrieveGroupByName($groupName) {
 		
-		return $this->retrieveGroup(get_id_from_group_name($groupName));
+		return Group::retrieveGroup(get_id_from_group_name($groupName));
 		
 	}
 	
