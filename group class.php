@@ -29,14 +29,8 @@ class Group{
 
 	public static function retrieveGroupByName($groupName) {
 		
-		$newGroup = new Group();
-
-		$newGroup->groupID = get_id_from_group_name($groupName);
-		$newGroup->groupName = $groupName;
-
+		return $this->retrieveGroup(get_id_from_group_name($groupName));
 		
-
-		return $newGroup;
 	}
 	
 	//	Returns a list of userIDs for users in the group.
