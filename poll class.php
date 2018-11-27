@@ -1,8 +1,9 @@
 <?php
 include("db_functions.php");
 class Poll {
-    private $pollID= -16;
-    private $groupID= -16;
+    private $pollID = -16;
+    private $groupID = -16;
+    private $restaurantName = "";
     
     public static function createNewPoll($groupID, $restaurantName) {
         
@@ -24,6 +25,10 @@ class Poll {
         $newPoll->restaurantName = $details["restaurantName"];
 
         return $newPoll;
+    }
+
+    public function restaurant() {
+        return $this->restaurantName;
     }
 
     //  Returns true if poll is open, false if it is closed
