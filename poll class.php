@@ -59,19 +59,19 @@ class Poll {
         }
     }
 
-    // returns array of ids of users who voted yes
-    public function usersVotedYes() {
-        return get_users_voted_yes($this->pollID);
+    // returns array of userNames of users who voted yes
+    public function userNamesVotedYes() {
+        return get_user_names_voted_yes($this->pollID);
     }
 
-    // returns array of ids of users who voted no
-    public function usersVotedNo() {
-        return get_users_voted_no($this->pollID);
+    // returns array of userNames of users who voted no
+    public function userNamesVotedNo() {
+        return get_user_names_voted_no($this->pollID);
     }
 
-    // returns array of ids of users who haven't voted
-    public function usersNotVoted() {
-        return get_users_not_voted($this->pollID);
+    // returns array of userNames of users who haven't voted
+    public function userNamesNotVoted() {
+        return get_user_names_not_voted($this->pollID);
     }
 
     // return ID of group associated with this poll
