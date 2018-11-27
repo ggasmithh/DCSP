@@ -20,7 +20,7 @@ class Poll {
         $newPoll = new Poll();
         $newPoll->pollID = $pollID;
         
-        $details = get_poll_details($pollID);
+        $details = get_poll_details_from_id($pollID);
         $newPoll->groupID = $details["groupID"];
         $newPoll->restaurantName = $details["restaurantName"];
 
