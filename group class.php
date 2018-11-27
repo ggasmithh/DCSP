@@ -33,9 +33,14 @@ class Group{
 		
 	}
 	
-	//	Returns a list of userIDs for users in the group.
+	//	Returns a list of userNames for users in this group
     public function getUserNames() {
     	return get_user_names_from_group($this->groupID);
+	}
+
+	// Returns an array of userIDs for users in this group
+	public function getUserIDs() {
+		return get_user_ids_from_group($this->groupID);
 	}
 
 	//	Get polls for group
