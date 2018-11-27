@@ -59,14 +59,19 @@ class Poll {
         }
     }
 
-    // returns list of ids of users who voted yes
+    // returns array of ids of users who voted yes
     public function usersVotedYes() {
         return get_users_voted_yes($this->pollID);
     }
 
-    // returns list of ids of users who voted no
+    // returns array of ids of users who voted no
     public function usersVotedNo() {
         return get_users_voted_no($this->pollID);
+    }
+
+    // returns array of ids of users who haven't voted
+    public function usersNotVoted() {
+        return get_users_not_voted($this->pollID);
     }
 
     // return ID of group associated with this poll
